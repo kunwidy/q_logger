@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>E-Logger | Dashboard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: E-Logger
+  * Updated: 04 Jan 2024 with Bootstrap v5.3.2
+  * Author: QuadranInovasi.id
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- page loader -->
+  <div class="spinner-wrapper">
+    <div class="spinner-border text-info" role="status">
+      <span class="visually-hidden">Loading..</span>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <div id="logo">
+        <a href="dashboard.html"><img src="assets/img/logo.png" alt="q-logger" title="q-logger" /></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link active" href="dashboard.html"><span><i class="bi bi-pc-display-horizontal"></i> Dashboard</span></a></li>
+          <li class="dropdown"><a href="#"><span><i class="bi bi-speedometer"></i> Metering</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="trenlog.html">TrendLog</a></li>
+              <li><a href="basic-metering.html">Basic Metering</a></li>
+              <li><a href="power-energy.html">Power & Energy</a></li>
+              <li><a href="min-max.html">Min/Max</a></li>
+              <li><a href="thd.html">THD</a></li>
+              <li><a href="harmonic.html">Harmonics</a></li>
+              <li><a href="phase.html">Phase Angels</a></li>
+              <li><a href="secuence.html">Sequence</a></li>
+              <li><a href="datalog.html">Datalog</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span><i class="bi bi-ev-station"></i> Status</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="device.html">Device Information</a></li>
+              <li><a href="alarm.html">Alarm Status</a></li>
+              <li><a href="io.html">I/O</a></li>
+              <li><a href="soe.html">SOE</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span><i class="bi bi-wrench"></i> Setting</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="meter.html">Meter</a></li>
+              <li><a href="communications.html">Communications</a></li>
+              <li><a href="management.html">Management</a></li>
+              <li><a href="network.html">Network Diagnostic</a></li>
+              <li><a href="firmware.html">Firmware</a></li>
+              <li><a href="export-import.html">Export/Import</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div>
+        <a class="nav-link scrollto" href="login.html">Logout <i class="bi bi-arrow-bar-right"></i></a>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main class="q-log-section">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container-fluid">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>DASHBOARD</h2>
+          <ol>
+            <li class="text-white"><i class="bi bi-calendar4-event"></i> <strong>11:03 AM +0700 | 04 Jan, 2024</strong></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page pt-4">
+      <div class="container-fluid">
+
+        <div class="row">
+            <!-- Basic Metering -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6><i class="bi bi-speedometer2"></i> BASIC METERING</h6>
+                        <a href="#">full report <i class="bi bi-arrow-right-short"></i></a>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <tbody>
+                              <tr>
+                                <th scope="row">Average Voltage</th>
+                                <td class="text-end">148.123 V</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Average Line Voltage</th>
+                                <td class="text-end">76.830 V</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Average Current</th>
+                                <td class="text-end">001.097 V</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Frecuency</th>
+                                <td class="text-end">50.257 Hz</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Power Energy -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6><i class="bi bi-battery-charging"></i> POWER & ENERGY</h6>
+                        <a href="#">full report <i class="bi bi-arrow-right-short"></i></a>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <tbody>
+                              <tr>
+                                <th scope="row">Total Power Factor</th>
+                                <td class="text-end">1.000	PF</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Total Apparent Power</th>
+                                <td class="text-end">0.000	kVA</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Total Active Power</th>
+                                <td class="text-end">0.000	kW</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Import Active Energy</th>
+                                <td class="text-end">0.0	kWh</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THD -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6><i class="bi bi-lightning-charge"></i> THD</h6>
+                        <a href="#">full report <i class="bi bi-arrow-right-short"></i></a>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <tbody>
+                              <tr>
+                                <th scope="row">THD Voltage Average</th>
+                                <td class="text-end">10.240	%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">THD Current Average</th>
+                                <td class="text-end">1.251	%</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Max Demand -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6><i class="bi bi-graph-up-arrow"></i> MAX DEMAND</h6>
+                        <a href="#">full report <i class="bi bi-arrow-right-short"></i></a>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <tbody>
+                              <tr>
+                                <th scope="row">Maximum Apparent Power Demand</th>
+                                <td class="text-end">0.000	kVA</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Maximum Active Power Demand</th>
+                                <td class="text-end">0.000	kW</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <p class="ms-2">Module up since Thu Jan 04 2024 09:02:50 GMT+0700 (Western Indonesia Time)</p>
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-md-12">
+          <div class="footer-logo">
+            <a class="navbar-brand" href="#">Q-LOGGER <small>v.1.0</small></a>
+            <p>Metering App for Power Meter by Quadran Inovasi</p>
+          </div>
+        </div>       
+      </div>
+    </div>
+
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>E-Logger</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: E-Logger
+  * Updated: 04 Jan 2024 with Bootstrap v5.3.2
+  * Author: QuadranInovasi.id
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- page loader -->
+  <div class="spinner-wrapper">
+    <div class="spinner-border text-info" role="status">
+      <span class="visually-hidden">Loading..</span>
+    </div>
+  </div>
+
+  <main class="q-log-section">
+
+    <section class="inner-page">
+      <div class="container-fluid">
+        <div class="row justify-content-center login-wrapper">
+            <div class=" align-self-center">
+                <div class="col-md-4 offset-md-4">
+                    <div class="qlog-form">
+                        <div class="text-center mb-5">
+                            <img src="assets/img/logo-login.png" alt="q-logger">
+                            <p>Sign in to continue</p>
+                        </div>
+    
+                        <form>
+                            <i class="bi bi-person-square"></i> <strong>Choose access level:</strong>
+                            <div class="form-check mt-1">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                  <strong>User</strong> <span class="q-small">| views report & settings</span>
+                                </label>
+                              </div>
+                              <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    <strong>Admin</strong> <span class="q-small">| views, settings & control meter</span>
+                                </label>
+                              </div>
+                            <div class="mb-3">
+                                <i class="bi bi-shield-lock"></i> <label for="pwd01" class="form-label">Password</label>
+                              <input type="password" class="form-control" id="pwd01" required>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-info" type="button" onclick="window.location.href='dashboard.html'"><i class="bi bi-key-fill"></i> Signin</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+ 
+
+  </footer><!-- End  Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

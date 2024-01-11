@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>E-Logger</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: E-Logger
+  * Updated: 04 Jan 2024 with Bootstrap v5.3.2
+  * Author: QuadranInovasi.id
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- page loader -->
+  <div class="spinner-wrapper">
+    <div class="spinner-border text-info" role="status">
+      <span class="visually-hidden">Loading..</span>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <div id="logo">
+        <a href="dashboard.html"><img src="assets/img/logo.png" alt="q-logger" title="q-logger" /></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="dashboard.html"><span><i class="bi bi-pc-display-horizontal"></i> Dashboard</span></a></li>
+          <li class="dropdown"><a href="#"><span><i class="bi bi-speedometer"></i> Metering</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="trenlog.html">TrendLog</a></li>
+              <li><a href="basic-metering.html">Basic Metering</a></li>
+              <li><a href="power-energy.html">Power & Energy</a></li>
+              <li><a href="min-max.html">Min/Max</a></li>
+              <li><a href="thd.html">THD</a></li>
+              <li><a href="harmonic.html">Harmonics</a></li>
+              <li><a href="phase.html">Phase Angels</a></li>
+              <li><a href="secuence.html">Sequence</a></li>
+              <li><a href="datalog.html">Datalog</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span><i class="bi bi-ev-station"></i> Status</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="device.html">Device Information</a></li>
+              <li><a href="alarm.html">Alarm Status</a></li>
+              <li><a href="io.html">I/O</a></li>
+              <li><a href="soe.html">SOE</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="active"><span><i class="bi bi-wrench"></i> Settings</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="meter.html">Meter</a></li>
+              <li><a href="communications.html">Communications</a></li>
+              <li><a href="management.html">Management</a></li>
+              <li><a href="network.html" class="active">Network Diagnostic</a></li>
+              <li><a href="firmware.html">Firmware</a></li>
+              <li><a href="export-import.html">Export/Import</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div>
+        <a class="nav-link scrollto" href="login.html">Logout <i class="bi bi-arrow-bar-right"></i></a>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main class="q-log-section">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container-fluid">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2><small>Settings</small> NETWORK DIAGNOSTIC</h2>
+          <ol>
+            <li class="text-white"><i class="bi bi-calendar4-event"></i> <strong>11:03 AM +0700 | 04 Jan, 2024</strong></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page pt-4">
+      <div class="container-fluid">
+        <!-- tab navigation -->
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-net1-tab" data-bs-toggle="pill" data-bs-target="#pills-net1" type="button" role="tab" aria-controls="pills-net1" aria-selected="true">Networking Status</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-net2-tab" data-bs-toggle="pill" data-bs-target="#pills-net2" type="button" role="tab" aria-controls="pills-net2" aria-selected="false">Host Lookup</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-net3-tab" data-bs-toggle="pill" data-bs-target="#pills-net3" type="button" role="tab" aria-controls="pills-net3" aria-selected="false">Connection Test</button>
+          </li>
+          
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <!-- tab 1 -->
+          <div class="tab-pane fade show active" id="pills-net1" role="tabpanel" aria-labelledby="pills-net1-tab" tabindex="0">
+            <div class="d-grid mb-2">
+              <button class="btn btn-success" type="button"><i class="bi bi-arrow-clockwise"></i> Refresh</button>
+            </div>
+            <!-- card 1 -->
+            <div class="card mb-4">
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6><i class="bi bi-router-fill"></i> Ethernet Network</h6>
+              </div>
+              <div class="card-body">
+                <pre id="ifconfigOutput" _v-6ce202f0="">
+eth0      Link encap:Ethernet  HWaddr EC:C3:8A:21:AC:0E  
+          inet addr:192.168.18.112  Bcast:192.168.18.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:108092 errors:0 dropped:0 overruns:0 frame:3
+          TX packets:75385 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:19106347 (18.2 MiB)  TX bytes:14994195 (14.2 MiB)
+          Interrupt:103 Base address:0x3000 DMA chan:ff 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+tun0      Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  
+          inet addr:10.1.1.75  P-t-P:10.1.1.75  Mask:255.255.0.0
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1500  Metric:1
+          RX packets:56574 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:43690 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:500 
+          RX bytes:10567750 (10.0 MiB)  TX bytes:9121058 (8.6 MiB)
+                </pre>
+              </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="card mb-4">
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6><i class="bi bi-router-fill"></i> Routing Table</h6>
+              </div>
+              <div class="card-body">
+                <pre id="routeOutput" _v-6ce202f0="">
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.18.1    0.0.0.0         UG    202    0        0 eth0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      0        0 tun0
+192.168.18.0    0.0.0.0         255.255.255.0   U     202    0        0 eth0
+192.168.18.112  127.0.0.1       255.255.255.255 UGH   202    0        0 lo
+                </pre>
+              </div>
+            </div>
+
+            <!-- card 3 -->
+            <div class="card mb-4">
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6><i class="bi bi-router-fill"></i> DNS Server</h6>
+              </div>
+              <div class="card-body">
+                <pre id="dnsOutput" _v-6ce202f0="">
+nameserver 203.142.82.222
+nameserver 8.8.4.4
+                </pre>
+              </div>
+            </div>
+
+            <!-- card 4 -->
+            <div class="card mb-4">
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6><i class="bi bi-router-fill"></i> Network Stat</h6>
+              </div>
+              <div class="card-body">
+                <pre id="netstatOutput" _v-6ce202f0="">
+netstat: /proc/net/tcp6: No such file or directory
+netstat: /proc/net/udp6: No such file or directory
+ign Address         State       
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      
+tcp        0      0 0.0.0.0:34000           0.0.0.0:*               LISTEN      
+tcp        0      0 0.0.0.0:502             0.0.0.0:*               LISTEN      
+tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      
+tcp        0    654 192.168.18.112:54651    3.18.87.224:34000       ESTABLISHED 
+tcp        0    294 10.1.1.75:443           10.1.0.1:59516          FIN_WAIT1   
+tcp        0     32 10.1.1.75:443           10.1.0.1:59514          CLOSING     
+udp        0      0 0.0.0.0:33333           0.0.0.0:*                           
+udp        0      0 0.0.0.0:46225           0.0.0.0:*                           
+udp        0      0 0.0.0.0:34000           0.0.0.0:*                           
+udp        0      0 0.0.0.0:5353            0.0.0.0:*                           
+                  </pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- tab 2 -->
+          <div class="tab-pane fade" id="pills-net2" role="tabpanel" aria-labelledby="pills-net2-tab" tabindex="0">
+            <div class="card mb-4">
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6><i class="bi bi-wifi"></i> HOST LOOKUP</h6>
+              </div>
+              <div class="card-body">
+                  <table class="table table-hover">
+                      <tbody>
+                        <form>
+                          <div class="row mb-3">
+                            <label for="Domain1" class="col-sm-4 col-form-label">Name of system or domain name to lookup</label>
+                            <div class="col-sm-8">
+                              <input type="email" class="form-control" id="Domain1" aria-describedby="domainHelp">
+                              <div id="domainHelp" class="form-text">
+                                valid ip or domain name
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="row mb-3">
+                            <div class="col-sm-8 offset-sm-4">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="ns1">
+                                <label class="form-check-label" for="ns1">
+                                  NS lookup
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="ns2" checked>
+                                <label class="form-check-label" for="ns2">
+                                  Ping
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="ns3">
+                                <label class="form-check-label" for="ns3">
+                                  Trace route
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-info">Lookup</button>
+                        </form>
+                      </tbody>
+                    </table>
+              </div>
+          </div>
+          </div>
+
+          <!-- tab 3 -->
+          <div class="tab-pane fade" id="pills-net3" role="tabpanel" aria-labelledby="pills-net3-tab" tabindex="0">
+            <div class="card mb-4">
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6><i class="bi bi-speedometer2"></i> CONNECTION TEST</h6>
+                  <a href="#">full report <i class="bi bi-arrow-right-short"></i></a>
+              </div>
+              <div class="card-body">
+                <p>This diagnostic page will attempt a connection to the specified network nodes.<br>
+                In the process, all network settings will be tested and a report will be given with detailed results of these tests.</p>
+                <button type="button" class="btn btn-info"><i class="bi bi-arrows-expand"></i> Begin Test</button>
+                <hr>
+                <pre id="networkTestOutput" _v-6ce202f0="">
+# Loop Back Address #
+PING 127.0.0.1 <b><font color="green">SUCCESS</font></b>
+# Gateway #
+PING 192.168.18.1 <b><font color="green">SUCCESS</font></b>
+# DNS 1 #
+PING 203.142.82.222 <b><font color="green">SUCCESS</font></b>
+# DNS 2 #
+PING 8.8.4.4 <b><font color="green">SUCCESS</font></b>
+
+TEST COMPLETE 4/4 PASS
+                 </pre>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-md-12">
+          <div class="footer-logo">
+            <a class="navbar-brand" href="#">Q-LOGGER <small>v.1.0</small></a>
+            <p>Metering App for Power Meter by quadran Inovasi</p>
+          </div>
+        </div>       
+      </div>
+    </div>
+
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
