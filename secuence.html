@@ -192,7 +192,10 @@
         <div class="tab-content tab-content-border" id="myTabContent">
           <!-- Positive tab -->
           <div class="tab-pane fade show active" id="positive-tab-pane" role="tabpanel" aria-labelledby="positive-tab" tabindex="0">
-            Munculkan grafik lingkaran...
+            <!-- chart -->
+            <div class="chart-bar mb-4">
+              <canvas id="myRadarChart"></canvas>
+            </div>
           </div>
 
           <!-- Negative tab -->
@@ -227,9 +230,13 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/Chart.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Page with chart scripts -->
+  <script src="assets/js/chart-radar-demo.js"></script>
 
 </body>
 

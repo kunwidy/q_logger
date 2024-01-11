@@ -165,6 +165,10 @@
   const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl));
   const spinnerWrapperEl = document.querySelector('.spinner-wrapper');
 
+  const tooltip = new bootstrap.Tooltip('.q-tooltip', {
+    boundary: document.body // or document.querySelector('#boundary')
+  });
+
   window.addEventListener('load', () => {
     spinnerWrapperEl.style.opacity = '0';
 
