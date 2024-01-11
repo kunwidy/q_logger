@@ -219,6 +219,7 @@ span {
   position: relative;
   height: 10rem;
   width: 100%;
+  background-color: #fff;
 }
 
 @media (min-width: 768px) {
