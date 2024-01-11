@@ -2,7 +2,6 @@
 * Template Name: Q-Logger
 * Updated: Jan 05 2024 with Bootstrap v5.3.2
 * Author: Quadran Inovasi
-* License: https://bootstrapmade.com/license/
 */
 (function() {
   "use strict";

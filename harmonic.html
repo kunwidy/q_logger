@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>E-Logger - Power and Energy</title>
+  <title>E-Logger - Harmonic</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -24,7 +24,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: E-Logger
+  * Template Name: Q-Logger
   * Updated: 04 Jan 2024 with Bootstrap v5.3.2
   * Author: QuadranInovasi.id
   ======================================================== -->
@@ -110,26 +110,32 @@
     <section class="inner-page pt-4">
       <div class="container-fluid">
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn btn-primary me-md-2" type="button">Button</button>
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Tablet</a></li>
-                  <li><a class="dropdown-item" href="#">Smartphone</a></li>
-                </ul>
-              </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">Voltage</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Voltage</a></li>
+              <li><a class="dropdown-item" href="#">Current</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">Harmonics</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Harmonis 02-31</a></li>
+              <li><a class="dropdown-item" href="#">Harmonis 32-63</a></li>
+            </ul>
+          </div>
         </div>
 
         <!-- Chart Harmonic -->
-        <div>
-          GRAFIK HARMONIK
+        <div class="chart-bar mb-4">
+          <canvas id="myBarChart"></canvas>
         </div>
-
+        <hr>
         <!-- Table Harmonic -->
-        <div class="table-responsive">
+        <div class="table-responsive mt-4">
           <table class="table table-hover table-bordered align-middle">
               <thead>
-                  <tr class="table-warning">
+                  <tr class="table-info">
                     <th scope="col">Harmonic</th>
                     <th scope="col" class="text-center">Phase A</th>
                     <th scope="col" class="text-center">Phase B</th>
@@ -195,9 +201,13 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/Chart.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Page with chart scripts -->
+  <script src="assets/js/chart-bar-demo.js"></script>
 
 </body>
 

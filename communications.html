@@ -24,7 +24,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: E-Logger
+  * Template Name: Q-Logger
   * Updated: 04 Jan 2024 with Bootstrap v5.3.2
   * Author: QuadranInovasi.id
   ======================================================== -->
@@ -141,15 +141,519 @@
             
           </ul>
           <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-com1" role="tabpanel" aria-labelledby="pills-com1-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="pills-com2" role="tabpanel" aria-labelledby="pills-com2-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="pills-com3" role="tabpanel" aria-labelledby="pills-com3-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="pills-com4" role="tabpanel" aria-labelledby="pills-com4-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="pills-com5" role="tabpanel" aria-labelledby="pills-com5-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="pills-com6" role="tabpanel" aria-labelledby="pills-com6-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="pills-com7" role="tabpanel" aria-labelledby="pills-com7-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="pills-com8" role="tabpanel" aria-labelledby="pills-com8-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="pills-com9" role="tabpanel" aria-labelledby="pills-com9-tab" tabindex="0">...</div>
+            <!-- network -->
+            <div class="tab-pane fade show active" id="pills-com1" role="tabpanel" aria-labelledby="pills-com1-tab" tabindex="0">
+              <hr>
+              <form class="mt-4">
+                <div class="row mb-3">
+                  <label for="inlineRadio1" class="col-sm-3 col-form-label">DHCP</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp0" id="inlineRadio1" value="option1">
+                      <label class="form-check-label" for="inlineRadio1">Manual</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp0" id="inlineRadio2" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2">Auto</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp1" class="col-sm-3 col-form-label">DHCP DNS Server 1</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp1" aria-describedby="dhcpHelp">
+                    <div id="dhcpHelp" class="form-text">
+                      Default: 8.8.8.8
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp2" class="col-sm-3 col-form-label">DHCP DNS Server 2</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp2" aria-describedby="dhcpHelp2">
+                    <div id="dhcpHelp2" class="form-text">
+                      Default: 8.8.4.4
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inlineRadio1b" class="col-sm-3 col-form-label">Allow HTTP</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp02" id="inlineRadio1b" value="option1" checked>
+                      <label class="form-check-label" for="inlineRadio1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp02" id="inlineRadio2b" value="option2">
+                      <label class="form-check-label" for="inlineRadio2">No</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp3" class="col-sm-3 col-form-label">HTTPS Port</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp3" aria-describedby="dhcpHelp3">
+                    <div id="dhcpHelp3" class="form-text">
+                      Default: 443, Range 6000-9999
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp4" class="col-sm-3 col-form-label">Modbus TCP Port</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp4" aria-describedby="dhcpHelp4">
+                    <div id="dhcpHelp4" class="form-text">
+                      Default: 502, Range 2000-5999
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp5" class="col-sm-3 col-form-label">Meter Channel 2 Address (Modbus TCP)</label>
+                  <div class="col-sm-9">
+                    <input type="number" class="form-control" id="Dhcp5" aria-describedby="dhcpHelp5">
+                    <div id="dhcpHelp5" class="form-text">
+                      Range 1-247
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inlineRadio1c" class="col-sm-3 col-form-label">Proxy Server Enable</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp03" id="inlineRadio1c" value="option1" checked>
+                      <label class="form-check-label" for="inlineRadio1c">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp03" id="inlineRadio2c" value="option2">
+                      <label class="form-check-label" for="inlineRadio2c">No</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-sm-9 offset-sm-3"><button type="submit" class="btn btn-info"><i class="bi bi-floppy2"></i> SAVE</button></div>
+                </div>
+              </form>
+            </div>
+
+            <!-- email -->
+            <div class="tab-pane fade" id="pills-com2" role="tabpanel" aria-labelledby="pills-com2-tab" tabindex="0">
+              <hr>
+              <form class="mt-4">
+                <div class="row mb-3">
+                  <label for="inlineRadio1d" class="col-sm-3 col-form-label">SMTP Enable</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp04" id="inlineRadio1d" value="option1">
+                      <label class="form-check-label" for="inlineRadio1d">Disable</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp04" id="inlineRadio2d" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2d">Enable</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-sm-9 offset-sm-3"><button type="submit" class="btn btn-info"><i class="bi bi-floppy2"></i> SAVE</button></div>
+                </div>
+              </form>
+            </div>
+
+            <!-- time/date -->
+            <div class="tab-pane fade" id="pills-com3" role="tabpanel" aria-labelledby="pills-com3-tab" tabindex="0">
+              <hr>
+              <form class="mt-4">
+                <div class="row mb-3">
+                  <label for="inlineRadio1e" class="col-sm-3 col-form-label">SNTP Enable</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp5" id="inlineRadio1e" value="option1">
+                      <label class="form-check-label" for="inlineRadio1e">Disable</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp5" id="inlineRadio2e" value="option2">
+                      <label class="form-check-label" for="inlineRadio2e">Enable</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp6" class="col-sm-3 col-form-label">SNTP Interval (minutes)</label>
+                  <div class="col-sm-9">
+                    <input type="number" class="form-control" id="Dhcp6" aria-describedby="dhcpHelp6">
+                    <div id="dhcpHelp6" class="form-text">
+                      range: 1-6000 minutes
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp7" class="col-sm-3 col-form-label">SNTP Server 1</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp7" aria-describedby="dhcpHelp7">
+                    <div id="dhcpHelp7" class="form-text">
+                      Default:
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp8" class="col-sm-3 col-form-label">SNTP Server 2</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp8" aria-describedby="dhcpHelp8">
+                    <div id="dhcpHelp8" class="form-text">
+                      Default:
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp10" class="col-sm-3 col-form-label">SNTP Server 3</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp10" aria-describedby="dhcpHelp10">
+                    <div id="dhcpHelp10" class="form-text">
+                      Default:
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp11" class="col-sm-3 col-form-label">Device Clock</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp11" aria-describedby="dhcpHelp11" value="January 11, 2024 10:30 AM" disabled>
+                    <div id="dhcpHelp11" class="form-text text-danger">
+                      *Unable to change
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="Dhcp12" class="col-sm-3 col-form-label">Time Zone</label>
+                  <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="Dhcp12">
+                      <option value="1">Indonesia - West</option>
+                      <option value="2">Indonesia - Central</option>
+                      <option value="3">Indonesia - North</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-sm-9 offset-sm-3"><button type="submit" class="btn btn-info"><i class="bi bi-floppy2"></i> SAVE</button></div>
+                </div>
+              </form>
+            </div>
+
+            <!-- datalog -->
+            <div class="tab-pane fade" id="pills-com4" role="tabpanel" aria-labelledby="pills-com4-tab" tabindex="0">
+              <hr>
+              <form class="mt-4">
+                <div class="row mb-3">
+                  <label for="inlineRadio1e" class="col-sm-3 col-form-label">Data Upload</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up1" id="inlineRadio1e" value="option1">
+                      <label class="form-check-label" for="inlineRadio1e">Disable</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up1" id="inlineRadio2e" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2e">Enable</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp13" class="col-sm-3 col-form-label">Log Start Time</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp13" aria-describedby="dhcpHelp13" value="January 11, 2024 10:30 AM" disabled>
+                    <div id="dhcpHelp13" class="form-text text-danger">
+                      *Unable to change
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="Dhcp15" class="col-sm-3 col-form-label">Log Interval</label>
+                  <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="Dhcp15">
+                      <option value="1">15 seconds</option>
+                      <option value="2">1 minute</option>
+                      <option value="3">5 minutes</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="Dhcp16" class="col-sm-3 col-form-label">Backup file length</label>
+                  <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="Dhcp16">
+                      <option value="1">1 day</option>
+                      <option value="2">1 month</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp14" class="col-sm-3 col-form-label">Backup File Prefix</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp14" aria-describedby="dhcpHelp14" value="Logger1.csv">
+                    <div id="dhcpHelp14" class="form-text">
+                      (e.g., logger1-2017-10-01T09-46-1day.csv)
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inlineRadio1g" class="col-sm-3 col-form-label">SFTP Enable</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up2" id="inlineRadio1g" value="option1">
+                      <label class="form-check-label" for="inlineRadio1g">Disable</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up2" id="inlineRadio2g" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2g">Enable</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-sm-9 offset-sm-3"><button type="submit" class="btn btn-info"><i class="bi bi-floppy2"></i> SAVE</button></div>
+                </div>
+              </form>
+            </div>
+
+            <!-- http -->
+            <div class="tab-pane fade" id="pills-com5" role="tabpanel" aria-labelledby="pills-com5-tab" tabindex="0">
+              <hr>
+              <form class="mt-4">
+                <div class="row mb-3">
+                  <label for="inlineRadio1h" class="col-sm-3 col-form-label">Data Upload</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up3" id="inlineRadio1h" value="option1">
+                      <label class="form-check-label" for="inlineRadio1h">Disable</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up3" id="inlineRadio2h" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2h">Enable</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp13" class="col-sm-3 col-form-label">Log Start Time</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp13" aria-describedby="dhcpHelp13" value="January 11, 2024 10:30 AM" disabled>
+                    <div id="dhcpHelp13" class="form-text text-danger">
+                      *Unable to change
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="Dhcp15" class="col-sm-3 col-form-label">Log Interval</label>
+                  <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="Dhcp15">
+                      <option value="1">15 seconds</option>
+                      <option value="2">1 minute</option>
+                      <option value="3">5 minutes</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inlineRadio1i" class="col-sm-3 col-form-label">Timestamp Format</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up4" id="inlineRadio1i" value="option1">
+                      <label class="form-check-label" for="inlineRadio1i">Local Time String</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up4" id="inlineRadio2i" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2i">UTC Seconds</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up4" id="inlineRadio3i" value="option3" checked>
+                      <label class="form-check-label" for="inlineRadio3i">ISO8601 Format</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp17" class="col-sm-3 col-form-label">Push File Prefix</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp17" aria-describedby="dhcpHelp14" value="logger1">
+                    <div id="dhcpHelp17" class="form-text">
+                      (e.g., logger1-2017-10-01T09-46-1day.csv)
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="Dhcp19" class="col-sm-3 col-form-label">Post File Length</label>
+                  <div class="col-sm-9">
+                    <select class="form-select" aria-label="Default select example" id="Dhcp19">
+                      <option value="1">15 seconds</option>
+                      <option value="2">1 minute</option>
+                      <option value="3">5 minutes</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inlineRadio1j" class="col-sm-3 col-form-label">Post File Name Format</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up6" id="inlineRadio1j" value="option1">
+                      <label class="form-check-label" for="inlineRadio1j">Old Format</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up6" id="inlineRadio2j" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2j">Time Interval Format</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inlineRadio1k" class="col-sm-3 col-form-label">HTTP Push Channel 1 Enable</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up5" id="inlineRadio1k" value="option1">
+                      <label class="form-check-label" for="inlineRadio1k">No</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up5" id="inlineRadio2k" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2k">Yes</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inlineRadio1l" class="col-sm-3 col-form-label">HTTP Push Channel 2 Enable</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up7" id="inlineRadio1l" value="option1">
+                      <label class="form-check-label" for="inlineRadio1l">No</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up7" id="inlineRadio2l" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2l">Yes</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inlineRadio1m" class="col-sm-3 col-form-label">FTP Push Enable</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up8" id="inlineRadio1m" value="option1">
+                      <label class="form-check-label" for="inlineRadio1m">No</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Up8" id="inlineRadio2m" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2m">Yes</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-sm-9 offset-sm-3"><button type="submit" class="btn btn-info"><i class="bi bi-floppy2"></i> SAVE</button></div>
+                </div>
+              </form>
+            </div>
+
+            <!-- AcuCloud Post -->
+            <div class="tab-pane fade" id="pills-com6" role="tabpanel" aria-labelledby="pills-com6-tab" tabindex="0">
+              <hr>
+              <form class="mt-4">
+                <div class="row mb-3">
+                  <label for="inlineRadio1n" class="col-sm-3 col-form-label">AcuCloud Reporting</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp08" id="inlineRadio1n" value="option1">
+                      <label class="form-check-label" for="inlineRadio1n">Disable</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp08" id="inlineRadio2n" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2n">Enable</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-sm-9 offset-sm-3"><button type="submit" class="btn btn-info"><i class="bi bi-floppy2"></i> SAVE</button></div>
+                </div>
+              </form>
+            </div>
+
+            <!-- snmp -->
+            <div class="tab-pane fade" id="pills-com7" role="tabpanel" aria-labelledby="pills-com7-tab" tabindex="0">
+              <hr>
+              <form class="mt-4">
+                <div class="row mb-3">
+                  <label for="inlineRadio1o" class="col-sm-3 col-form-label">SNMP Enable</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp09" id="inlineRadio1o" value="option1">
+                      <label class="form-check-label" for="inlineRadio1o">Disable</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp09" id="inlineRadio2o" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2o">Enable</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-sm-9 offset-sm-3"><button type="submit" class="btn btn-info"><i class="bi bi-floppy2"></i> SAVE</button></div>
+                </div>
+              </form>
+            </div>
+
+            <!-- dnp3 -->
+            <div class="tab-pane fade" id="pills-com8" role="tabpanel" aria-labelledby="pills-com8-tab" tabindex="0">
+              <hr>
+              <form class="mt-4">
+                <div class="row mb-3">
+                  <label for="inlineRadio1p" class="col-sm-3 col-form-label">DNP3 Enable</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp10" id="inlineRadio1p" value="option1">
+                      <label class="form-check-label" for="inlineRadio1p">Disable</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp10" id="inlineRadio2p" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2p">Enable</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-sm-9 offset-sm-3"><button type="submit" class="btn btn-info"><i class="bi bi-floppy2"></i> SAVE</button></div>
+                </div>
+              </form>
+            </div>
+
+            <!-- remote access -->
+            <div class="tab-pane fade" id="pills-com9" role="tabpanel" aria-labelledby="pills-com9-tab" tabindex="0">
+              <hr>
+              <form class="mt-4">
+                <div class="row mb-3">
+                  <label for="inlineRadio1q" class="col-sm-3 col-form-label">Remote Access Enable</label>
+                  <div class="col-sm-9">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp11" id="inlineRadio1q" value="option1">
+                      <label class="form-check-label" for="inlineRadio1q">Disable</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="Dhcp11" id="inlineRadio2q" value="option2" checked>
+                      <label class="form-check-label" for="inlineRadio2q">Enable</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp20" class="col-sm-3 col-form-label">Registration Status</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp20" aria-describedby="dhcpHelp20" value="REGISTERED!" disabled>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp21" class="col-sm-3 col-form-label">Remote Status</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp21" aria-describedby="dhcpHelp21" value="ONLINE!" disabled>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Dhcp22" class="col-sm-3 col-form-label">Remote Access URL</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="Dhcp22" aria-describedby="dhcpHelp22" value=" https://am53080188.accuenergy.io/">
+                  </div>
+                </div><div class="row mb-4">
+                  <label for="Dhcp23" class="col-sm-3 col-form-label">Reset</label>
+                  <div class="col-sm-9">
+                    <button type="button" class="btn btn-primary" id="Dhcp23"><i class="bi bi-arrow-clockwise"></i> Refresh status</button>
+                    <button type="button" class="btn btn-danger"><i class="bi bi-x-circle"></i> Deregister</button>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-sm-9 offset-sm-3"><button type="submit" class="btn btn-info"><i class="bi bi-floppy2"></i> SAVE</button></div>
+                </div>
+              </form>
+            </div>
           </div>
       </div>
     </section>
