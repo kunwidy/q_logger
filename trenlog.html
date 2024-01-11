@@ -123,11 +123,66 @@
                 <div class="tab-content" id="pills-tabContent">
                     <!-- realtime-->
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                      <div>
+                        <form class="row gy-2 gx-3 align-items-center">
+                          <div class="col-auto">Time Frame :</div>
+                          <div class="col-auto">
+                            <label class="visually-hidden" for="autoSizingSelect">Time frame</label>
+                            <select class="form-select" id="autoSizingSelect">
+                              <option selected>Choose...</option>
+                              <option value="1">15 minutes</option>
+                              <option value="2">1 our</option>
+                            </select>
+                          </div>
+                          <div class="col-auto">Parameter :</div>
+                          <div class="col-auto">
+                            <div class="btn-group" role="group" aria-label="First group">
+                              <button type="button" class="btn btn-default active">VLN</button>
+                              <button type="button" class="btn btn-default">VLL</button>
+                              <button type="button" class="btn btn-default">I</button>
+                              <button type="button" class="btn btn-default">P</button>
+                              <button type="button" class="btn btn-default">Q</button>
+                              <button type="button" class="btn btn-default">S</button>
+                              <button type="button" class="btn btn-default">PF</button>
+                              <button type="button" class="btn btn-default">THD-V</button>
+                              <button type="button" class="btn btn-default">THD-I</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
                       <div class="chart-bar">
                         <canvas id="myBarChart"></canvas>
                       </div>
                     </div>
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">Energy...</div>
+
+                    <!-- energy -->
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                      <div>
+                        <form class="row gy-2 gx-3 align-items-center">
+                          <div class="col-auto">Time Frame :</div>
+                          <div class="col-auto">
+                            <label class="visually-hidden" for="autoSizingSelect">Time frame</label>
+                            <select class="form-select" id="autoSizingSelect">
+                              <option selected>Choose...</option>
+                              <option value="1">15 minutes</option>
+                              <option value="2">1 our</option>
+                            </select>
+                          </div>
+                          <div class="col-auto">Parameter :</div>
+                          <div class="col-auto">
+                            <div class="btn-group" role="group" aria-label="First group">
+                              <button type="button" class="btn btn-default active">EP-IMP</button>
+                              <button type="button" class="btn btn-default">EP-EXP</button>
+                              <button type="button" class="btn btn-default">EQ-IMP</button>
+                              <button type="button" class="btn btn-default">EQ-EXP</button>
+                              <button type="button" class="btn btn-default">EP-TOTAL</button>
+                              <button type="button" class="btn btn-default">EQ-NET</button>
+                              <button type="button" class="btn btn-default">ES</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
